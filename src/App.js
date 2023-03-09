@@ -13,9 +13,11 @@ function App() {
       <PersistGate persistor={persistedStore}>
         <RouterProvider router={router}/>
         <ToastContainer
-          position={'bottom-center'}
+          position={'top-right'}
           autoClose={3000}
           theme={'dark'}
+          bodyClassName={'font-poppins'}
+          toastStyle={{background: 'rgba(13,35,68,0.95)', borderRadius: 10}}
         />
       </PersistGate>
     </StoreProvider>
