@@ -63,6 +63,7 @@ export default () => {
 
   return <MainLayout>
     <div className={'font-poppins w-full flex flex-col items-center justify-center space-y-10'}>
+      {nfts.length < 1 && <div className={'h-40'}/>}
       <div className={'font-nulshock'}>Browse NFT Collection</div>
       <input
         type={'text'}
