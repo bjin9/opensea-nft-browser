@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Nulshock';
+  src: local('Nulshock'), url(./assets/fonts/nulshock+bd.ttf) format('truetype');
+}
+@font-face {
+  font-family: Poppins;
+  src: url("./assets/fonts/Poppins-Medium.otf");
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -17,4 +26,24 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.font-nulshock {
+  font-family: Nulshock;
+}
+
+.font-poppins {
+  font-family: Poppins;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #AD0F5B;
+  border-radius: 50vh;
+  /* border: 3px solid #edf2f7; */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #AD0F5B;
 }
