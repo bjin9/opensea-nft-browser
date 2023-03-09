@@ -64,7 +64,7 @@ export default () => {
   return <MainLayout>
     <div className={'font-poppins w-full flex flex-col items-center justify-center space-y-10'}>
       {nfts.length < 1 && <div className={'h-40'}/>}
-      <div className={'font-nulshock'}>Browse NFT Collection</div>
+      <div className={'font-nulshock text-xl'}>Browse NFT Collection</div>
       <input
         type={'text'}
         className={'bg-transparent p-2 border-b-2 rounded-md w-full md:w-1/2 outline-none focus:border-b-2 focus:border-indigo-600 border-white text-center transition-all ease-in-out'}
@@ -72,7 +72,7 @@ export default () => {
         value={address}
         spellCheck={false}
         onChange={onChangeAddress}/>
-      <LoadableButton loading={loading} onClick={load} className={''}/>
+      {(nfts.length < 1 || addressChanged) && <LoadableButton loading={loading} onClick={load} className={''}/>}
       <Info metadata={nfts[0]?.contractMetadata}/>
       <List nfts={nfts}/>
       <div>
